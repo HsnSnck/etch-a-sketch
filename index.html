@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="scripts.js" defer></script>
     <title>Etch a Sketch</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header class="header">
-        <h1 class="title">Etch a Sketch</h1>
+      <h1 class="title">Etch a Sketch</h1>
     </header>
     <main class="main">
-        <div class="control"> </div>
-        <div class="grid-container"></div>
-    </main>
+      <div class="control">
+        <input type="color" id="grid-color" name="grid-color" value="#ff0000" />
+       <!-- <input type="range" min="1" max="100" value="16" id="grid-size" />
+        <label for="grid-size">test</label>-->
 
-</body>
+        <label id="labelslider" for="slider">Grid Size</label>
+        <!-- Range -->
+        <input
+          type="range"
+          id="slider"
+          min="0"
+          max="60"
+          value="0"
+          step="1"
+          oninput="outputUpdate(value)"
+        />
+        <output for="slider" id="range">0</output>
+      </div>
+      <div class="grid-container"></div>
+    </main>
+  </body>
 </html>
